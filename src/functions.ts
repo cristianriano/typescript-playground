@@ -7,7 +7,7 @@ function addOne(n: number = 1): number {
 let myFunction: (x: number) => number;
 myFunction = addOne;
 myFunction(3);
-myFunction(); // Default params
+// myFunction(); // Default params
 
 // Callbacks
 function addAndHandle(n1: number, n2: number, cb: (num: number) => void) {
@@ -23,3 +23,10 @@ addAndHandle(3, 4, (x) => {
 const withReturn = (x: number, y: number) => x + y;
 let oneParam: (val: string) => void;
 oneParam = (param) => console.log(param);
+
+// N params
+const addAll = (...numbers: number[]): number => {
+  return numbers.reduce((acc, num) => acc + num, 0);
+};
+
+addAll(1, 2, 3, 4, 5)
