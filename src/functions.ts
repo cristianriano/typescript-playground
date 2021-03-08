@@ -1,5 +1,5 @@
 // Function as a type
-function addOne(n: number): number {
+function addOne(n: number = 1): number {
   return n + 1;
 }
 
@@ -7,6 +7,7 @@ function addOne(n: number): number {
 let myFunction: (x: number) => number;
 myFunction = addOne;
 myFunction(3);
+myFunction(); // Default params
 
 // Callbacks
 function addAndHandle(n1: number, n2: number, cb: (num: number) => void) {
@@ -17,3 +18,8 @@ function addAndHandle(n1: number, n2: number, cb: (num: number) => void) {
 addAndHandle(3, 4, (x) => {
   console.log(x);
 });
+
+// Arrow functions
+const withReturn = (x: number, y: number) => x + y;
+let oneParam: (val: string) => void;
+oneParam = (param) => console.log(param);
