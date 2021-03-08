@@ -4,5 +4,10 @@
   "main": "index.js",
   "author": "Cristian Riano <cristiancarm11@gmail.com>",
   "license": "MIT",
-  "devDependencies": {}
+  "scripts": {
+    "start:dev": "lite-server"
+  },
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
 }
