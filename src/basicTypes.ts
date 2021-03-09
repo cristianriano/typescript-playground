@@ -25,7 +25,10 @@ let numOrString: number|string;
 let onOrOff: "on" | "off";
 
 // Custom
-type Combinable = number | string
+type Combinable = number | string;
+type Numeric = boolean | number;
+
+type Numable = Combinable & Numeric // Intersection is only number
 
 // Unknwon
 let userInput: unknown;
